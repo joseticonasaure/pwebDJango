@@ -21,5 +21,6 @@ from inicio import views as inicio_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', inicio_views.home, name='home'),  # nueva vista de inicio
+    path('', inicio_views.home, name='home'),
+    path('another/', inicio_views.another, name='another'),  # nueva vista
 ]
