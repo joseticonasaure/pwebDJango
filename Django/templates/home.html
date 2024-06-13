@@ -4,6 +4,11 @@
     <title>Inicio</title>
 </head>
 <body>
-    <h1>Bienvenido a la página de inicio</h1>
+    <h1>Bienvenido, {{ request.user.username }}</h1>
+    {% if request.user.is_authenticated %}
+        <p>Estás autenticado</p>
+    {% else %}
+        <p>No estás autenticado</p>
+    {% endif %}
 </body>
 </html>
