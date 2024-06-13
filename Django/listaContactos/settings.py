@@ -21,6 +21,11 @@ LANGUAGE_CODE = 'es'
 TIME_ZONE = 'America/Lima'
 
 
+INSTALLED_APPS = [
+    ...
+    'inicio',
+]
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
@@ -126,3 +131,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# vim listaContactos/settings.py
+
+import os
+
+TEMPLATES = [
+    {
+        ...
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        ...
+    },
+]
